@@ -7,12 +7,18 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'normalize.css';
-import './Layout/Main.scss'
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunk from "redux-thunk";
+import reducer from "./utilize/reducer.js";
+import {Provider} from "react-redux";
+
+const reduxStore = createStore(combineReducers({orders: reducer}), applyMiddleware(thunk));
 
 ReactDOM.render(
-    <App />,
+    <Provider store={reduxStore}><App /></Provider>,
     document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
