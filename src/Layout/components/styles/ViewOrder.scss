@@ -1,0 +1,24 @@
+#view-order
+{
+    margin-bottom: 40px;
+    @media (max-width: 414px) {
+        overflow-x: auto;
+    }
+    .container
+    {
+        background: #eee;
+        padding: 20px;
+        .table
+        {
+            background: #fff;
+        }
+        .total {
+            text-align: right;
+            h2 {
+                color: #333;
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+}

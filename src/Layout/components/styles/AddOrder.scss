@@ -69,8 +69,15 @@
                 }
             }
         }
-        .center {
-            text-align: center;
+        .center
+        {
+            left: 10%;
+            @media (max-width: 800px) {
+                left: 38%;
+            }
+            @media (max-width: 414px) {
+                left: 25%;
+            }
         }
     }
 }
