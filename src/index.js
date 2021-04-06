@@ -15,7 +15,9 @@ import {Provider} from "react-redux";
 const reduxStore = createStore(combineReducers({orders: reducer}), applyMiddleware(thunk));
 
 ReactDOM.render(
-    <Provider store={reduxStore}><App /></Provider>,
+    <Provider store={reduxStore}>
+        <App />
+    </Provider>,
     document.getElementById('root')
 );
 
