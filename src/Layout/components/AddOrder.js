@@ -35,9 +35,6 @@ export default function AddOrder() {
                                 <select className="order-items" onChange={(e) => {
                                     setSelectedCat(e.target.value);
                                     setPlaceOrder({ ...placeOrder, category: e.target.value });
-                                }} onSubmit={(e) => {
-                                    selectedCat(e.target.value);
-                                    setPlaceOrder({...placeOrder, category: ''});
                                 }}>
                                     {Object.keys(cats)?.map(k => <option value={k} key={k}>{k}</option>)}
                                 </select>
