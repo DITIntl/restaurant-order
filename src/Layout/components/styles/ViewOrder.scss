@@ -1,23 +1,45 @@
 #view-order
 {
-    margin-bottom: 40px;
-    @media (max-width: 414px) {
-        overflow-x: auto;
-    }
+    margin: 40px 0;
     .container
     {
         background: #eee;
         padding: 20px;
-        .table
-        {
+        .table {
             background: #fff;
+            thead
+            {
+                th {
+                    text-align: center;
+                }
+            }
+            tbody
+             {
+                 td {
+                     text-align: center;
+                 }
+             }
         }
-        .total {
+        .total
+        {
             text-align: right;
             h2 {
                 color: #333;
-                font-size: 30px;
+                font-size: 25px;
                 font-weight: 700;
+            }
+        }
+        .new-order
+        {
+            text-align: right;
+            .btn
+            {
+                margin-top: 15px;
+                padding: 8px 30px;
+                box-shadow: none;
+                @media (max-width: 800px) {
+                    margin-top: 10px;
+                }
             }
         }
     }

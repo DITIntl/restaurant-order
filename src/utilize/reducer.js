@@ -2,10 +2,8 @@ const initializeState = {
     order: []
 }
 
-export default function reducer(state = initializeState, action)
-{
-    switch(action.type)
-    {
+export default function reducer(state = initializeState, action) {
+    switch(action.type) {
         case "CREATE_ORDER":
             return {...state, order: [...state.order, action.payload]}
 
